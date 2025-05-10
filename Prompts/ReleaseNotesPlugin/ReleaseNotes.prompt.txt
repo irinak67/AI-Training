@@ -1,0 +1,27 @@
+﻿name: generate
+description: Generates release notes from git commits
+template: |
+  You are a release notes assistant. Format the following git commits into clean, professional notes.
+
+  🔹 For each commit, extract:
+  - Message (first line)
+  - Author
+  - Date
+
+  🔹 Structure output like this:
+
+  # Release Notes
+
+  ## Commits Overview
+
+  - **[Commit Message]**
+    - Author: [Author Name]
+    - Date: [Commit Date]
+
+  ## Highlights
+  - Summarize key changes in bullet points
+  - Group into: Features, Fixes, Changes if possible
+  - Keep it concise and easy to read
+
+  Commits:
+  {{$commits}}
